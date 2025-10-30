@@ -1,2 +1,49 @@
-# NBC-App
-A modern web application developed for New Bulgarian Cuisine (NBC) — a Bulgarian non-profit association promoting contemporary Bulgarian cuisine. The app provides tools for managing members, events, and documents, as well as automating administrative workflows such as GDPR compliance, membership tracking, and reporting. 
+# NBC Association Ultimate Hybrid (Desktop Client)
+
+Това е десктоп приложението за Сдружение "Нова българска кухня".
+
+Системата покрива:
+- Членство (регистър, прием, изключване, PDF решения)
+- Плащания (членски внос / дарения, разписки PDF, експорт Excel)
+- Проекти и бюджети (what-if симулации)
+- Счетоводство (Баланс, ОПР, Парични потоци, сметкоплан, експорт CSV/Excel/XML)
+- Гласувания и протоколи (ОС / УС, резултати, протокол PDF, полета за КЕП)
+- Архив документи (drag & drop, OCR, търсене по текст)
+- Напомняния (крайни срокове НАП/НСИ/ТР, известия)
+- Роли и достъп (Админ / УС / Член)
+
+## 1. Инсталация на зависимости
+
+В терминал, в папката на проекта:
+
+    pip install -r requirements.txt
+
+## 2. Стартиране в режим на разработка
+
+    python main.py
+
+При първо стартиране автоматично ще се създаде локална база `nbc.db`
+в папката на приложението.
+
+## 3. Билд за Windows (.exe)
+
+    pip install pyinstaller
+    pyinstaller --onefile --windowed --name "NBC_Association" main.py
+
+Готовият exe ще е в `dist/NBC_Association.exe`.
+
+## 4. Билд за macOS (.app)
+
+    pip install pyinstaller
+    pyinstaller --onefile --windowed --name "NBC_Association" main.py
+
+Готовият app bundle ще е в `dist/NBC_Association.app`.
+
+## 5. Роли и достъп
+- Админ: пълен достъп, настройки, потребители
+- УС: счетоводство, гласувания, протоколи, архив
+- Член: собствен профил, членски внос, публични бюджети, напомняния
+
+## 6. Важно
+Този snapshot съдържа ядро на функционалността.
+Интеграции като реален КЕП подпис, Stripe/Apple Pay и Cloud sync са TODO.
