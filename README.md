@@ -1,6 +1,6 @@
 # NBC Association Ultimate Hybrid (Desktop Client)
 
-Това е десктоп приложението за Сдружение "Нова българска кухня".
+Това е десктоп приложение за Сдружение "Нова българска кухня".
 
 Системата покрива:
 - Членство (регистър, прием, изключване, PDF решения)
@@ -14,36 +14,5 @@
 
 ## 1. Инсталация на зависимости
 
-В терминал, в папката на проекта:
-
-    pip install -r requirements.txt
-
-## 2. Стартиране в режим на разработка
-
-    python main.py
-
-При първо стартиране автоматично ще се създаде локална база `nbc.db`
-в папката на приложението.
-
-## 3. Билд за Windows (.exe)
-
-    pip install pyinstaller
-    pyinstaller --onefile --windowed --name "NBC_Association" main.py
-
-Готовият exe ще е в `dist/NBC_Association.exe`.
-
-## 4. Билд за macOS (.app)
-
-    pip install pyinstaller
-    pyinstaller --onefile --windowed --name "NBC_Association" main.py
-
-Готовият app bundle ще е в `dist/NBC_Association.app`.
-
-## 5. Роли и достъп
-- Админ: пълен достъп, настройки, потребители
-- УС: счетоводство, гласувания, протоколи, архив
-- Член: собствен профил, членски внос, публични бюджети, напомняния
-
-## 6. Важно
-Този snapshot съдържа ядро на функционалността.
-Интеграции като реален КЕП подпис, Stripe/Apple Pay и Cloud sync са TODO.
+```bash
+pip install -r requirements.txt
